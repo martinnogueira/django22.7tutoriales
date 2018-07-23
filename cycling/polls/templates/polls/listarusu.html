@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>lista de Usuarios</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<h2>Lista</h2>
+<p>Usuarios registrados:</p>
+{% if usuarios_por_nombre %}
+{% for user in usuarios_por_nombre %}
+<div class="w3-container">
+  <ul class="w3-ul w3-card-4">
+    <li class="w3-bar">
+      <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+      <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">{{ user.nombre }}</span><br>
+        <span>{{user.apellido}}</span>
+      </div>
+    </li>
+</div>
+{% endfor %}
+{% else %}
+    <p>no hay usuarios registrados</p>
+{% endif %}
+
+</body>
+</html>

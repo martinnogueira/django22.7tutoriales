@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+
+
+
+<h3>ingrese sus datos para registrarse:</h3>
+
+<div>
+  <form action=registro method="POST" id="registro" name="formularioindex">  
+  {% csrf_token %} {{form.as_p}}
+    <label for="fname">Nombree:</label>
+    <input type="text" id="idnombre" name="nombre">
+
+    <label for="lname">Apellido</label>
+    <input type="text" id="idapellido" name="apellido">
+	
+     <label for="lname">Edad</label>
+    <input type="text" id="idedad" name="edad">
+    
+     <label for="lname">Mail</label>
+    <input type="text" id="idmail" name="mail">
+    
+     <label for="lname">nickname</label>
+    <input type="text" id="idnickname" name="nickname">
+    
+    <button type="submit" class="btn btn-success">Enviar</button>
+    
+  </form>
+</div>
+
+
+</body>
+</html>
+
