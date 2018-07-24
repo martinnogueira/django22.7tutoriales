@@ -67,25 +67,15 @@
       <a class="navbar-brand" id = "letras"  href="#">Logo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      {% if user.is_authenticated %}
       <ul class="nav navbar-nav">
-        <li><a id = "letras" href="/account">Home</a></li>
-        <li><a id = "letras" href="/account/logout">Log out</a></li>
-        <li><a id = "letras" href="/account/perfil/editarperfil">Editar Perfil</a></li>
-        <li><a id = "letras" href="/account/cambiar_password">Cambiar Password</a></li>
-        <li><a id = "letras" href="/account/reset-password">Reset Password</a></li>
-      </ul>
-      {% else %}
-       <ul class="nav navbar-nav">
-        
-       
+      
+        <li><a id = "letras" href="/account/login">Login</a></li>
+        <li><a id = "letras" href="#">otracosa</a></li>
+        <li><a id = "letras" href="#">otracosa</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a id = "letras" href="/account/login">Login</a></li>
         <li><a id = "letras" href="/account/registrar"><span class="glyphicon glyphicon-log-in"></span> Registrarse</a></li>
       </ul>
-      {% endif %}
-      
     </div>
   </div>
 </nav>

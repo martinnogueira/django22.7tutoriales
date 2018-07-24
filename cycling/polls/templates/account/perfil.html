@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+
+
+{% block head%}
+<title>Perfil</title>
+
+{% endblock %}
+
+{% block body %}
+
+
+
+<p class="container">
+
+	{{ user }}
+	{{ user.first_name }}
+	{{ user.last_name }}
+	
+</p>
+
+{% endblock %}

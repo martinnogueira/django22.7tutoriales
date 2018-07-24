@@ -14,10 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
-
+from django.conf.urls import include,url
+from cycling import views
 urlpatterns = [
-    path('polls/', include('polls.urls')),
-    path('account/', include('account.urls')),
-    path('admin/', admin.site.urls),
+    url(r'^$', views.login_redirect, name='login_redirect'),
+    #estoy mandando url vacias hacia login automaticamente
+    #la funcion esta implementada en views de cycling projecto principal
+    url(r'^polls/', include('polls.urls')),
+    url(r'^account/', include('account.urls')),
+    url(r'^admin/', admin.site.urls),
 ]
