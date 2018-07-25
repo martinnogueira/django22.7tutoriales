@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'cycling.middleware.loginrequiredmiddleware',
 ]
 
 ROOT_URLCONF = 'cycling.urls'
@@ -126,6 +127,15 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_REDIRECT_URL = '/account/'
+
+LOGIN_URL = '/account/login/'
+LOGIN_EXEMPT_URLS = (
+   
+    r'^account/logout/$'
+    r'^account/registrar/$'
+    )
+
+
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
